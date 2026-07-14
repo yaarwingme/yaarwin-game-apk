@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply font-sans text-primary-600 bg-white;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-cta-500 hover:bg-cta-600 transition-all duration-300 shadow-lg shadow-cta-500/30 hover:shadow-cta-500/50 hover:-translate-y-0.5;
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-primary-700 bg-accent-500 hover:bg-accent-400 transition-all duration-300 shadow-lg shadow-accent-500/30 hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-accent-500 border-2 border-accent-500 hover:bg-accent-500 hover:text-primary-700 transition-all duration-300;
+  }
+  .section-pad {
+    @apply py-16 md:py-24;
+  }
+  .container-max {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-lg shadow-primary-900/5 border border-primary-100 p-6 md:p-8 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/10 hover:-translate-y-1;
+  }
+  .prose-content p {
+    @apply text-primary-500 leading-relaxed mb-4;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #FFD700, #FFB400);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .bg-hero-pattern {
+    background-image: radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(0, 200, 83, 0.06) 0%, transparent 50%);
+  }
+}
